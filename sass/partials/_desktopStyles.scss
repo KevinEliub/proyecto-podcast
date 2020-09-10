@@ -1,0 +1,160 @@
+@media screen and (min-width: 321px){
+    h1 {
+        font-size: 64px;
+        line-height: 84px;
+        .color-azul {
+            color: $color-menu;   
+        }
+    }
+    h2 {
+        font-size: 48px;
+        line-height: 62px;
+    }
+
+    h3 {
+        padding: 20px 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 0;
+    }
+
+    button {
+        width: auto;
+        font-size: 18px;
+        padding: 16px 60px;
+        margin: 55px 0;
+    }
+
+    nav {
+        
+        padding: 25px 6%;
+
+        .logo {
+            width: 36px;
+            padding: 6px 0;
+        }
+
+        .menu-options {
+            position: relative;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 510px;
+            padding: 0;
+            background: none;
+            .item-menu {
+                padding: 0 8px;
+                a {
+                    color: black;
+                    line-height: 3;
+                }
+                a:active {
+                    color: #999999;
+                }
+            }
+        }
+        #burguer-open {
+            display: none;
+        }
+    }
+
+    %ancho-estandar-desktop {
+        width: 100%;
+        padding: 0 14%;
+    }
+    
+    main {
+        @extend %ancho-estandar-desktop;
+        h1 {
+            margin: 110px 0 0 0;
+        }
+        h1 br {display: none;}
+        .p-mobile {
+            display: none;
+        }
+        .p-desktop {
+         display: block;
+        }
+    }
+
+    #seccion-episodios {
+        padding: 155px 0 250px 0;
+        background-image: linear-gradient(60deg, $color2degrade 10%, $color1degrade 70%);
+        h2 {
+            @extend %ancho-estandar-desktop;
+            margin-bottom: 25px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px 5%;
+            width: 100%;
+            padding: 0 6%;
+        }
+    }
+
+    #seccion-origen {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px 0;
+        @extend %ancho-estandar-desktop;
+        img {
+            width: 435px;
+            margin-top: -180px;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        h2, p {
+            padding: 0 50px 0 0;
+        }
+    }
+
+    #seccion-invitadas {
+        margin-top: 35px;
+        h2 {
+           @extend %ancho-estandar-desktop;
+           margin-bottom: 30px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    #seccion-temas {
+        @extend %ancho-estandar-desktop;
+        h2 {
+            padding: 25px 0;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px 0;
+            img {
+                margin-bottom:25px;
+            }
+        }
+    }
+
+    #seccion-novedades {
+        background-image: linear-gradient(60deg, $color2degrade 10%, $color1degrade 70%);
+        padding: 190px 0 130px 0;
+        button {
+            margin: 25px 0;
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 27px 6%;
+        p {
+            line-height: 40px;
+        }
+    }
+
+}

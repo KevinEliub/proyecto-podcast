@@ -9,17 +9,37 @@
   list-style: none;
 }
 
+.content-max-ancho {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+}
+
 h1, h2 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 42px;
+  margin-top: 30px;
 }
 
 h3 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   font-size: 24px;
+  line-height: 32px;
+  padding: 10px 0;
 }
 
 button {
@@ -29,7 +49,7 @@ button {
   font-size: 16px;
   background: #00F3BB;
   padding: 12px;
-  margin: 33px 0;
+  margin: 25px 0;
   cursor: pointer;
 }
 
@@ -42,24 +62,13 @@ button:hover {
 p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
+  line-height: 22px;
+  margin: 10px 0;
 }
 
 ul li {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
-}
-
-#content-max {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 nav {
@@ -74,7 +83,11 @@ nav {
   background: white;
 }
 
-nav ul {
+nav .logo {
+  width: 24px;
+}
+
+nav .menu-options {
   position: absolute;
   width: 100%;
   left: 0;
@@ -83,16 +96,22 @@ nav ul {
   background: #0000EC;
 }
 
-nav ul .item-menu {
+nav .menu-options .item-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 15px 5%;
-  background: #0000EC;
 }
 
-nav ul .item-menu a {
+nav .menu-options .item-menu a {
   color: white;
 }
 
-nav ul .item-menu a:hover {
+nav .menu-options .item-menu a:hover {
   color: #00F3BB;
   text-decoration: line-through;
 }
@@ -109,9 +128,9 @@ nav #chek-nav-bar:checked ~ .menu-options, nav #chek-nav-bar:checked ~ #burguer-
   display: block;
 }
 
-main {
-  width: 90%;
-  margin-left: 5%;
+main, #seccion-episodios h2, #seccion-origen h2, #seccion-origen p, #seccion-temas, #seccion-novedades .content {
+  width: 100%;
+  padding: 0 5%;
 }
 
 main h1 {
@@ -122,44 +141,282 @@ main h1 .txt-tachado {
   text-decoration: line-through;
 }
 
-main p {
-  line-height: 22px;
+main .p-desktop {
+  display: none;
 }
 
 #seccion-episodios {
-  width: 90%;
-  margin-left: 5%;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30px 0 140px 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0000A3), to(#0000FF));
+  background-image: linear-gradient(0deg, #0000A3 0%, #0000FF 100%);
+}
+
+#seccion-episodios svg:first-child {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10vw;
+}
+
+#seccion-episodios svg:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
 }
 
 #seccion-episodios h2 {
-  margin: 20px 0;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#seccion-episodios .content {
+  width: 100%;
+  padding: 0 3%;
+}
+
+#seccion-episodios .content iframe {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#seccion-origen {
+  z-index: 10;
+  width: 100%;
+}
+
+#seccion-origen img {
+  width: 100%;
+  margin-top: -94px;
+}
+
+#seccion-invitadas h2 {
+  width: 100%;
+  padding: 11px 5% 16px 5%;
+}
+
+#seccion-invitadas .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#seccion-invitadas img {
+  width: 100%;
+}
+
+#seccion-temas h2 {
+  padding: 20px 0;
+}
+
+#seccion-temas .content {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 0 0 25px 0;
+}
+
+#seccion-temas .content .sub-content {
+  padding: 20px 0;
+}
+
+#seccion-temas .content .sub-content img {
+  margin: 0 auto;
+  width: 104px;
+}
+
+#seccion-novedades {
+  position: relative;
+  padding: 40px 0;
+  background-image: linear-gradient(40deg, #0000A3 0%, #0000FF 65%);
+}
+
+#seccion-novedades svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10vw;
+}
+
+#seccion-novedades .content {
+  text-align: center;
+}
+
+#seccion-novedades .content h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0 30px 0;
+}
+
+footer i {
+  padding: 13px 17px;
+  color: black;
 }
 
 @media screen and (min-width: 321px) {
+  h1 {
+    font-size: 64px;
+    line-height: 84px;
+  }
+  h1 .color-azul {
+    color: #0000EC;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  h3 {
+    padding: 20px 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0;
+  }
+  button {
+    width: auto;
+    font-size: 18px;
+    padding: 16px 60px;
+    margin: 55px 0;
+  }
   nav {
+    padding: 25px 6%;
+  }
+  nav .logo {
+    width: 36px;
+    padding: 6px 0;
+  }
+  nav .menu-options {
+    position: relative;
+    top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  nav .menu-options {
-    display: inline-block;
-  }
-  nav .menu-options .item-menu {
-    display: inline-block;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 510px;
+    padding: 0;
     background: none;
   }
+  nav .menu-options .item-menu {
+    padding: 0 8px;
+  }
   nav .menu-options .item-menu a {
-    color: #060A24 56%;
     color: black;
+    line-height: 3;
   }
   nav .menu-options .item-menu a:active {
-    color: #060a2461;
+    color: #999999;
   }
   nav #burguer-open {
     display: none;
   }
+  main, #seccion-episodios h2, #seccion-origen, #seccion-invitadas h2, #seccion-temas {
+    width: 100%;
+    padding: 0 14%;
+  }
+  main h1 {
+    margin: 110px 0 0 0;
+  }
   main h1 br {
     display: none;
+  }
+  main .p-mobile {
+    display: none;
+  }
+  main .p-desktop {
+    display: block;
+  }
+  #seccion-episodios {
+    padding: 155px 0 250px 0;
+    background-image: linear-gradient(60deg, #0000A3 10%, #0000FF 70%);
+  }
+  #seccion-episodios h2 {
+    margin-bottom: 25px;
+  }
+  #seccion-episodios .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 5%;
+    width: 100%;
+    padding: 0 6%;
+  }
+  #seccion-origen {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 0;
+  }
+  #seccion-origen img {
+    width: 435px;
+    margin-top: -180px;
+  }
+  #seccion-origen h2 {
+    margin-bottom: 30px;
+  }
+  #seccion-origen h2, #seccion-origen p {
+    padding: 0 50px 0 0;
+  }
+  #seccion-invitadas {
+    margin-top: 35px;
+  }
+  #seccion-invitadas h2 {
+    margin-bottom: 30px;
+  }
+  #seccion-invitadas .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #seccion-temas h2 {
+    padding: 25px 0;
+  }
+  #seccion-temas .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px 0;
+  }
+  #seccion-temas .content img {
+    margin-bottom: 25px;
+  }
+  #seccion-novedades {
+    background-image: linear-gradient(60deg, #0000A3 10%, #0000FF 70%);
+    padding: 190px 0 130px 0;
+  }
+  #seccion-novedades button {
+    margin: 25px 0;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 27px 6%;
+  }
+  footer p {
+    line-height: 40px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
