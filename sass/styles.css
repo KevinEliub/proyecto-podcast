@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1, h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+button {
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 16px;
+  background: #00F3BB;
+  padding: 12px;
+  margin: 33px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00F0B8), to(#0000FE));
+  background-image: linear-gradient(90deg, #00F0B8 0%, #0000FE 100%);
+  color: white;
+}
+
+p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+}
+
+ul li {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+}
+
+#content-max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 10px 5%;
+  background: white;
+}
+
+nav ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 44px;
+  padding: 10px 0;
+  background: #0000EC;
+}
+
+nav ul .item-menu {
+  padding: 15px 5%;
+  background: #0000EC;
+}
+
+nav ul .item-menu a {
+  color: white;
+}
+
+nav ul .item-menu a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+}
+
+nav #burguer-close, nav .menu-options, nav #chek-nav-bar {
+  display: none;
+}
+
+nav #chek-nav-bar:checked ~ #burguer-open {
+  display: none;
+}
+
+nav #chek-nav-bar:checked ~ .menu-options, nav #chek-nav-bar:checked ~ #burguer-close {
+  display: block;
+}
+
+main {
+  width: 90%;
+  margin-left: 5%;
+}
+
+main h1 {
+  margin: 25px 0 16px 0;
+}
+
+main h1 .txt-tachado {
+  text-decoration: line-through;
+}
+
+main p {
+  line-height: 22px;
+}
+
+#seccion-episodios {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#seccion-episodios h2 {
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 321px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .menu-options {
+    display: inline-block;
+  }
+  nav .menu-options .item-menu {
+    display: inline-block;
+    background: none;
+  }
+  nav .menu-options .item-menu a {
+    color: #060A24 56%;
+    color: black;
+  }
+  nav .menu-options .item-menu a:active {
+    color: #060a2461;
+  }
+  nav #burguer-open {
+    display: none;
+  }
+  main h1 br {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

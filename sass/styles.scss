@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+$color-menu: #0000EC;
+$color1degrade: #0000FF;
+$color2degrade: #0000A3;
+$color1btn: #00F3BB;
+$color1btn-degrade: #00F0B8;
+$color2btn-degrade: #0000FE;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+h1,h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+button {
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    background: $color1btn;
+    padding:12px;
+    margin: 33px 0;
+    cursor: pointer;
+}
+button:hover {
+    background-image: linear-gradient(90deg, $color1btn-degrade 0%, $color2btn-degrade 100%);
+    color: white;
+}
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+}
+
+ul li {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+#content-max {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 5%;
+    background: white;
+
+    ul {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 44px;
+        padding: 10px 0;
+        background: $color-menu;
+        //transition: all 1s ease;
+        .item-menu {
+            padding: 15px 5%;
+            background: $color-menu;
+            //transition: all 1s ease;
+            a {
+                color: white;
+            }
+            a:hover {
+                color: $color1btn;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    #burguer-close, .menu-options, #chek-nav-bar {
+        display: none;
+    }
+    
+    #chek-nav-bar:checked ~ #burguer-open {
+        display: none;
+    }
+    
+    #chek-nav-bar:checked ~ .menu-options, #chek-nav-bar:checked ~ #burguer-close {
+        display: block;
+    }
+}
+
+main {
+    width: 90%;
+    margin-left: 5%;
+    h1 {
+        margin: 25px 0 16px 0;
+    }
+    h1 .txt-tachado {
+        text-decoration: line-through;
+    }
+    p {line-height: 22px;}
+}
+
+#seccion-episodios {
+    width: 90%;
+    margin-left: 5%;
+    h2 {
+        margin: 20px 0; 
+    }
+}
+
+@media screen and (min-width: 321px){
+    nav {
+        display: flex;
+        .menu-options {
+            display:inline-block;
+            .item-menu {
+                display: inline-block;
+                background: none;
+                a {color: #060A24 56%;
+                    color: black;
+                }
+                a:active {
+                    color: #060a2461;
+                }
+            }
+        }
+        #burguer-open {
+            display: none;
+        }
+    }
+    main {
+        h1 br {display: none;}
+    }
+}
